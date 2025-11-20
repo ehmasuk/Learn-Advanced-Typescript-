@@ -6,9 +6,9 @@ interface AddressType {
 interface User {
   name: string;
   age: number;
-  hobbies: string[]; // array of string
+  hobbies: string[]; //! array of string
   address: AddressType;
-  married?: boolean; // optional property
+  married?: boolean; //! optional property
 }
 
 const user: User = {

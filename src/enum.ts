@@ -1,3 +1,5 @@
+//! enum  is not a recommanded way for mongoose enum schemas
+
 enum StatusType {
   Verified = "verified",
   Unverified = "unverified",
@@ -19,5 +21,15 @@ const user: UserType = {
   status: StatusType.Unverified,
   roles: [RolesType.User, RolesType.Editor],
 };
+
+// ! Alternative and modern way (RECOMANDED)
+
+type AltStatusType = "verified" | "unverified";
+
+const perintStatus = (status: AltStatusType): void => {
+  console.log(status);
+};
+
+perintStatus("verified");
 
 console.log(user);
